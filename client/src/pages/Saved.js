@@ -33,7 +33,6 @@ class Saved extends Component {
                 <NavBar page='saved'/>
                 <div className='wrapper'>
                     <Header />
-                    Saved
                     <BookList label='Saved Books' books={this.state.books} actionLabel='Delete' handleAction={this.handleDelete}/>
                 </div>
             </div>

@@ -15,8 +15,8 @@ class Search extends Component {
 
     handleSave = id => {
         API.saveBook(this.state.books[id])
-            .then(alert(`${this.state.books[id].title} saved!`))
-            .catch(alert(`${this.state.books[id].title} already saved!`));
+            .then(() => alert(`${this.state.books[id].title} saved!`))
+            .catch(err => alert(`${this.state.books[id].title} already saved!`));
     }
 
     handleSearch = query => {
