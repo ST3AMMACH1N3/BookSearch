@@ -13,18 +13,23 @@ class Saved extends Component {
     }
 
     componentDidMount() {
-        API.getBooks().then(results => {
-            this.setState({
-                books: results.data
+        API.getBooks()
+            .then(results => {
+                this.setState({
+                    books: results.data
+                })
             })
-        })
+            .catch(err => console.log(err));
     }
 
     handleDelete = id => {
         API.deleteBook(id)
-            .then(this.setState({
-                books: this.state.books.filter(book => book._id !== id)
-            }))
+            .then(() => {
+                this.setState({
+                    books: this.state.books.filter(book => book._id !== id)
+                })
+            })
+            .catch(err => console.log(err));
     }
 
     render() {

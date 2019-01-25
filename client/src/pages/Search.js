@@ -22,7 +22,7 @@ class Search extends Component {
     handleSearch = query => {
         API.searchBook(query)
             .then(results => {
-                results = results.data.map(book=> {
+                results = results.data.map(book => {
                     let { title, authors, description } = book.volumeInfo;
                     let image = book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail;
                     let link = book.volumeInfo.infoLink;

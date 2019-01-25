@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 function Book(props) {
-    let {title, authors, description, link, image } = props.info;
+    let { title, authors, description, link, image } = props.info;
     return (
         <div className='book'>
             <h3>{title}</h3>

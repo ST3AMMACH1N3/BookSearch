@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css';
 
 class SearchBox extends Component {
     constructor(props) {
@@ -16,11 +17,11 @@ class SearchBox extends Component {
 
     render() {
         return (
-            <div>
+            <div className='book-search'>
                 <h3>Book Search</h3>
-                <span>Book: </span>
-                <input type='text' name='query' value={this.state.query} onChange={this.handleChange}/>
-                <button type='button' onClick={() => this.props.handleClick(this.state.query)}>Search</button>
+                <p>Book: </p>
+                <input className='search-input'type='text' name='query' value={this.state.query} onChange={this.handleChange}/>
+                <button className='search-button' type='button' onClick={() => this.props.handleClick(this.state.query)}>Search</button>
             </div>
         )
     }
