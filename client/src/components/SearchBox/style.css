@@ -3,6 +3,8 @@
     padding: 10px;
     margin: 20px 0px;
     overflow: hidden;
+    background: #fafafa;
+    box-shadow: 0px 3px 3px 0px #0005;
 }
 
 .search-input {
